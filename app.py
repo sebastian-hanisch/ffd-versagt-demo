@@ -2,7 +2,7 @@
 Sebastian Hanisch - Operations Research und Machine Learning
 
 Stück 3 der Reihe „Packen: Reihenfolge und Platzierungsregel“. Instanzen mit bekanntem Optimum (Triplets, die 11/9-Instanz): FFD verfehlt es, die Reihenfolge zu
-ändern hilft wenig, und das Verfehlen überlebt kleine Störungen. Experiment A und C sind vorberechnet (fvs_precomputed.json), B rechnet live.
+ändern verringert die Lücke nur, und das Verfehlen überlebt kleine Störungen. Experiment A und C sind vorberechnet (fvs_precomputed.json), B rechnet live.
 
 Lauffähig mit: streamlit run app.py
 """
@@ -53,7 +53,7 @@ with st.container(key="kopf"):
     st.title("🧱 Wo FFD versagt: Triplets und die 11/9-Instanz")
 st.markdown(
     """
-**FFD** (First Fit Decreasing) braucht manchmal mehr Container als nötig. Diese Demo baut Instanzen, bei denen das Optimum **durch Konstruktion bekannt** ist: **Triplets** sind drei Pakete, die zusammen genau einen Container füllen, und jede optimale Packung füllt jeden Container ganz. Die Volumenschranke kennt dann das Optimum, FFD verfehlt es trotzdem, und die Reihenfolge der Pakete zu ändern hilft kaum.
+**FFD** (First Fit Decreasing) braucht manchmal mehr Container als nötig. Diese Demo baut Instanzen, bei denen das Optimum **durch Konstruktion bekannt** ist: **Triplets** sind drei Pakete, die zusammen genau einen Container füllen, und jede optimale Packung füllt jeden Container ganz. Die Volumenschranke kennt dann das Optimum, FFD verfehlt es meist (im Experiment in allen 1000 Instanzen), und eine andere Reihenfolge der Pakete verringert die Lücke, schließt sie aber nicht.
 
 Weiter unten: die Abschnitte **🔬 Experiment** (Triplets, Störung der 11/9-Instanz, kleines Optimum), **🚧 Wo die Annahmen enden**, der Expander **⚠️ Annahmen, Grenzen und bekannte Probleme** und der Expander **📐 Mathematische Formulierung**.
 """
@@ -186,7 +186,7 @@ st.markdown(
 | **Das Optimum ist durch Konstruktion bekannt** | Bei zufälligen oder praktischen Instanzen kennt man es nicht; die Demo zeigt nur gezielt gebaute Instanzen. Wie oft FFD dort verfehlt, zeigt das Experiment mit dem kleinen Optimum nur für höchstens 12 Pakete. | Stück 2 dieser Reihe |
 | **Nur FFD, andere Reihenfolgen und eine eigene Füllregel** | Eine Suche nach der besten Reihenfolge und andere Regeln kommen später; die Füllregel ist eine eigene Heuristik, kein Verfahren aus der Literatur. | spätere Stücke dieser Reihe |
 | **Pakete zwischen einem Viertel und der Hälfte der Kapazität** | Für Triplets mit anderen Größen gelten die gemessenen Zahlen nicht; die Demo hat sie nicht untersucht. | - |
-| **Die Garantie ist eine Obergrenze** | Sie sagt, was höchstens vorkommt, nicht, was typisch ist: Bei kleinem Optimum wird sie erreicht (Experiment oben), bei Zufallsinstanzen meist deutlich unterschritten (Stück 1 und 2). | Stück 1 und 2 dieser Reihe |
+| **Die Garantie ist eine Obergrenze** | Sie sagt, was höchstens vorkommt, nicht, was typisch ist: Bei Optimum 2 bis 5 wird sie erreicht, bei 6 nicht (Experiment oben), bei Zufallsinstanzen meist deutlich unterschritten (Stück 1 und 2). | Stück 1 und 2 dieser Reihe |
 """
 )
 

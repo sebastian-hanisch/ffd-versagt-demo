@@ -62,13 +62,14 @@ def test_ffd_ist_in_keiner_der_1000_instanzen_optimal():
     assert "**FFD ist in 0 von 1000 Instanzen optimal**" in README
 
 
-def test_sortieren_schadet_ab_zehn_triplets_und_ist_bei_fuenf_gleich():
+def test_sortieren_schadet_ab_zehn_triplets_und_ist_bei_fuenf_fast_gleich():
     z = zeilen()
     gleich = {k: round(x["mittel"]["FFD"], 2) == round(x["mittel"]["FF"], 2) for k, x in z.items()}
     schadet = {k: round(x["mittel"]["FFD"], 2) > round(x["mittel"]["FF"], 2) for k, x in z.items()}
     assert gleich == {5: True, 10: False, 20: False, 40: False, 100: False} and schadet == {5: False, 10: True, 20: True, 40: True, 100: True}
-    assert "**Sortieren schadet ab 10 Triplets:**" in README and "(bei 5 sind beide gleich, 1,00)" in README
+    assert "**Sortieren schadet ab 10 Triplets:**" in README and "(bei 5 fast gleich: 1,000 gegen 1,005)" in README
     assert de(z[5]["mittel"]["FFD"]) == de(z[5]["mittel"]["FF"]) == "1,00"
+    assert de(z[5]["mittel"]["FFD"], 3) == "1,000" and de(z[5]["mittel"]["FF"], 3) == "1,005"
 
 
 def test_aufsteigend_ist_in_allen_fuenf_zeilen_am_schlechtesten():

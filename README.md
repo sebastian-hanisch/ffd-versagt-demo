@@ -7,7 +7,7 @@ Drittes Stück der Konzepte-Reihe **„Packen: Reihenfolge und Platzierungsregel
 
 ## Warum dieses Problem
 
-Auf Zufallsinstanzen liegt FFD meist dicht am Optimum. Es gibt aber Instanzen, bei denen die Volumenschranke das Optimum kennt und FFD es trotzdem verfehlt, und die Reihenfolge zu ändern hilft dort kaum. Die Demo zeigt das an Triplets (drei Pakete, die zusammen genau einen Container füllen), an der 11/9-Instanz und an kleinen Zufallsinstanzen.
+Auf Zufallsinstanzen liegt FFD meist dicht am Optimum. Es gibt aber Instanzen, bei denen die Volumenschranke das Optimum kennt und FFD es meist verfehlt, und eine andere Reihenfolge verringert die Lücke, schließt sie in den Messungen aber nicht. Die Demo zeigt das an Triplets (drei Pakete, die zusammen genau einen Container füllen), an der 11/9-Instanz und an kleinen Zufallsinstanzen.
 
 ## Modell
 
@@ -36,7 +36,7 @@ Alle Zahlen sind Messungen an den Instanzen dieser Demo (feste Seeds), nachgerec
 | 100 | 12,88 | 10,50 | 22,39 | 8,32 | nicht gerechnet | 0 | 15 |
 
 - **FFD ist in 0 von 1000 Instanzen optimal** (200 je Zeile, fünf Zeilen).
-- **Sortieren schadet ab 10 Triplets:** FFD liegt über First Fit in Lieferreihenfolge bei 10, 20, 40 und 100 Triplets (bei 5 sind beide gleich, 1,00); aufsteigend sortiert ist in allen fünf Zeilen am schlechtesten.
+- **Sortieren schadet ab 10 Triplets:** FFD liegt über First Fit in Lieferreihenfolge bei 10, 20, 40 und 100 Triplets (bei 5 fast gleich: 1,000 gegen 1,005); aufsteigend sortiert ist in allen fünf Zeilen am schlechtesten.
 - **Reihenfolge suchen hilft, löst es aber nicht:** Der beste von 100 Zufallsordnungen liegt in allen fünf Zeilen unter FFD, bei 100 Triplets aber noch 8,32 Container über dem Optimum.
 - **Die Füllregel** erreicht das Optimum in 180 von 200 Instanzen bei 5 Triplets, in 76 bei 10 und in 0 bei 20 und 40 (mittlere Lücke 1,00 und 1,07).
 - **Das größte Verhältnis FFD / Optimum** ist 1,200 bei 5, 10 und 20 Triplets und 1,150 bei 40 und 100, in allen fünf Zeilen kleiner als 11/9 (1,222).
