@@ -1,0 +1,146 @@
+{
+ "fuell_limit": 40,
+ "instanzen": 200,
+ "klein": {
+  "10": {
+   "groesstes_verhaeltnis": [
+    4,
+    3
+   ],
+   "luecken": {
+    "0": 1949,
+    "1": 51
+   },
+   "max_ffd_je_opt": {
+    "2": 2,
+    "3": 4,
+    "4": 5,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8
+   }
+  },
+  "12": {
+   "groesstes_verhaeltnis": [
+    4,
+    3
+   ],
+   "luecken": {
+    "0": 1937,
+    "1": 63
+   },
+   "max_ffd_je_opt": {
+    "10": 10,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9
+   }
+  },
+  "6": {
+   "groesstes_verhaeltnis": [
+    3,
+    2
+   ],
+   "luecken": {
+    "0": 1969,
+    "1": 31
+   },
+   "max_ffd_je_opt": {
+    "1": 1,
+    "2": 3,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6
+   }
+  },
+  "8": {
+   "groesstes_verhaeltnis": [
+    3,
+    2
+   ],
+   "luecken": {
+    "0": 1968,
+    "1": 32
+   },
+   "max_ffd_je_opt": {
+    "2": 3,
+    "3": 4,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8
+   }
+  }
+ },
+ "klein_instanzen": 2000,
+ "triplets": {
+  "10": {
+   "ffd_optimal": 0,
+   "fuell_optimal": 76,
+   "max_luecke": 2,
+   "summen": {
+    "AUF": 484,
+    "FF": 305,
+    "FFD": 355,
+    "FUELL": 124,
+    "ZUF": 200
+   }
+  },
+  "100": {
+   "ffd_optimal": 0,
+   "fuell_optimal": null,
+   "max_luecke": 15,
+   "summen": {
+    "AUF": 4479,
+    "FF": 2100,
+    "FFD": 2575,
+    "FUELL": null,
+    "ZUF": 1665
+   }
+  },
+  "20": {
+   "ffd_optimal": 0,
+   "fuell_optimal": 0,
+   "max_luecke": 4,
+   "summen": {
+    "AUF": 938,
+    "FF": 510,
+    "FFD": 565,
+    "FUELL": 200,
+    "ZUF": 360
+   }
+  },
+  "40": {
+   "ffd_optimal": 0,
+   "fuell_optimal": 0,
+   "max_luecke": 6,
+   "summen": {
+    "AUF": 1833,
+    "FF": 902,
+    "FFD": 1071,
+    "FUELL": 214,
+    "ZUF": 631
+   }
+  },
+  "5": {
+   "ffd_optimal": 0,
+   "fuell_optimal": 180,
+   "max_luecke": 1,
+   "summen": {
+    "AUF": 225,
+    "FF": 201,
+    "FFD": 200,
+    "FUELL": 20,
+    "ZUF": 198
+   }
+  }
+ },
+ "zufallsordnungen": 100
+}
